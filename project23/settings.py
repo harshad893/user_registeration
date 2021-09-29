@@ -16,7 +16,7 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 import os
 TEMPLATE_DIR=os.path.join(BASE_DIR,'templates')
-
+MEDIA_DIR=os.path.join(BASE_DIR,'media')
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
@@ -120,8 +120,16 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
-
+MEDIA_URL='/media/'
+MEDIA_ROOT=MEDIA_DIR
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+EMAIL_HOST='smtp.gmail.com'
+EMAIL_HOST_USER='harshadvali1432@gmail.com'
+EMAIL_HOST_PASSWORD=''
+EMAIL_USE_SSL=False
+EMAIL_USE_TLS=True
+EMAIL_PORT=587
