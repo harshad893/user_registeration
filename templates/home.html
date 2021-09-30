@@ -1,0 +1,26 @@
+{% extends 'dummy.html' %}
+
+{% block title %}
+    <title>Home Page</title>
+{% endblock %}
+
+{% block body_block %}
+
+    <center>
+        {% if username %}
+        <div class='container'>
+            <div class='jumbotron'>
+                    <h1>Welcome to Home page Mr/Ms {{username}}</h1>
+            </div>
+
+        </div>
+        {% else %}
+        <div class='container'>
+            <div class='jumbotron'>
+                    <h1>Welcome to Home page</h1>
+            </div>
+
+        </div>
+        {% endif %}
+    </center>
+{% endblock %}
